@@ -67,11 +67,15 @@
   <canvas class="confetti"></canvas>
 
   <!-- Background Music -->
-  <audio autoplay loop hidden>
+  <button onclick="document.getElementById('musik').play()" style="margin-top: 20px; padding: 10px 20px; font-size: 1em;">
+    🎵 Klik untuk Mainkan Musik
+  </button>
+  
+  <audio id="musik" loop>
     <source src="lagu_ultah.mp3" type="audio/mpeg">
     Browser kamu tidak mendukung audio tag.
   </audio>
-
+  
   <div class="container">
     <h1>Selamat Ulang Tahun Ke-29🎉</h1>
     <h2>Kak Patrezia Diah Ayu Paminto Putri</h2>
