@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun, Kak Patrezia!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffccff);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #e91e63;
+      margin: 10px 0 0;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #d81b60;
+      margin: 0 0 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #444;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .confetti {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .container {
+      z-index: 2;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <canvas class="confetti"></canvas>
+
+  <!-- Background Music -->
+  <audio autoplay loop hidden>
+    <source src="lagu_ultah.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio tag.
+  </audio>
+
+  <div class="container">
+    <h1>Selamat Ulang Tahun Ke-29🎉</h1>
+    <h2>Kak Patrezia Diah Ayu Paminto Putri</h2>
+    <img src="foto_mba_putri.jpg" alt="Foto Kak Patrezia" />
+    <p>
+      Semoga di hari spesial ini, Kakak mendapatkan kebahagiaan yang melimpah, kesehatan yang selalu ada, dan kesuksesan dalam setiap langkah.
+      Terima kasih sudah menjadi kakak yang luar biasa. We love you! 💖🎂
+    </p>
+  </div>
+
+  <!-- Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const canvas = document.querySelector('.confetti');
+    const myConfetti = confetti.create(canvas, {
+      resize: true,
+      useWorker: true
+    });
+
+    setInterval(() => {
+      myConfetti({
+        particleCount: 100,
+        spread: 160,
+        origin: { y: 0.6 }
+      });
+    }, 1000);
+  </script>
+  
+</body>
+</html>
